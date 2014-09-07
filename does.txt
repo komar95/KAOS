@@ -1,0 +1,4 @@
+arm-none-eabi-gcc test.c -o test.o
+arm-none eabi-ld --no-undefined test1.o test2.o -o out.elf -T kernel.ld
+arm-none-eabi-objcopy out.elf -O binary kernel.img
+arm-none-eabi-objdump -d out.elf > kernel.list
